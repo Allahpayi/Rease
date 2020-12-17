@@ -211,6 +211,70 @@ textarea {
     font-size: 1.2rem;
 }
 
+
+.blog-card .blog-card-category {
+    margin: .5rem 1rem;
+    padding: 0rem 1rem;
+    border-radius: 4rem;
+    display: inline-block;
+    color: var(--white);
+    background-color: var(--blue);
+    -webkit-border-radius: 4rem;
+    -moz-border-radius: 4rem;
+    -ms-border-radius: 4rem;
+    -o-border-radius: 4rem;
+}
+
+.blog-card .blog-card-body {
+    border: 1px solid var(--blue);
+    border-top:none;
+}
+.blog-card .blog-card-content {
+    padding: 0rem 1rem;
+}
+
+.blog-card .blog-card-body .blog-card-content .blog-card-title {
+    font-size: 1.2rem;
+}
+
+.blog-card .blog-card-body .blog-card-content .blog-card-description {
+    font-size: .9rem;
+}
+
+.blog-card .blog-card-body .blog-card-author {
+    display: flex;
+    align-items: center;
+}
+
+.blog-card .blog-card-body .blog-card-author {
+    padding: .4rem 1rem;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.blog-card .blog-card-body .blog-card-author .blog-card-author-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.blog-card .blog-card-body .blog-card-author .blog-card-author-info {
+    margin-left: 1rem;
+}
+
+.blog-card .blog-card-body .blog-card-author .blog-card-author-info .blog-card-author-name {
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.blog-card .blog-card-body .blog-card-author .blog-card-author-info .blog-card-author-position {
+    font-size: .8rem;
+}
+
 .btn-primary {
     transition: background-color .4s;
     border-bottom-left-radius: 1rem;
@@ -252,7 +316,6 @@ textarea {
 .pb-2 {
     padding-bottom: 2rem !important;
 }
-
 
 /* =============================================
                     GRID SYSTEM 
@@ -375,8 +438,8 @@ textarea {
     }
 
 }
-
 .active {
+
     color: var(--blue);
     border-bottom: .18rem solid var(--blue);
 }
@@ -645,7 +708,8 @@ header .services .service-card .service-card-description {
 
 .our-projects .home-project-card {
     position: relative;
-    border: 1px dashed var(--blue);
+    /* border: 1px solid var(--grey); */
+    box-shadow: 0px 0px 6px 1px var(--lightblue);
 }
 
 .our-projects .home-project-card .home-project-overlay {
@@ -749,7 +813,7 @@ header .services .service-card .service-card-description {
                    GO CONTACT
    =============================================*/
 
-.go-contact,
+/* .go-contact,
 .go-contact .go-contact-bg {
     position: relative;
 }
@@ -774,26 +838,59 @@ header .services .service-card .service-card-description {
 .go-contact .go-contact-content .go-to-page {
     padding-left: 1.4rem;
     padding-right: 1.4rem;
-}
+} */
 
 /* =============================================
                    STATİSTİC
    =============================================*/
 
 .statistic {
-    margin-bottom: 20rem;
+    padding-top: 2rem;
+    background-color: var(--black);
+    background-image: url(../img/home-contact-bg-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.statistic::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 22, 65, 0.6);
 }
 
 .statistic .statistic-card {
-    padding: 4rem;
+    position: relative;
+    z-index: 2;
     text-align: center;
     color: var(--white);
-    background-color: var(--darkblue);
+}
 
+.statistic .statistic-card i {
+    font-size: 5rem;
 }
 
 .statistic .statistic-card .statistic-card-title {
+    margin-top: .8rem;
     font-size: 1.4rem;
 }
 
-.statistic .statistic-card .counter {}
+.statistic .statistic-card .counter {
+    font-size: 2rem;
+    margin: 0rem;
+}
+
+/* =============================================
+                   BLOG
+   =============================================*/
+
+.blog {
+    margin-bottom: 20rem;
+
+}
