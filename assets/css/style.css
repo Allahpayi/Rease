@@ -295,9 +295,11 @@ textarea {
 .mt-2 {
     margin-top: 2rem !important;
 }
+
 .mb-1 {
     margin-bottom: 2rem !important;
 }
+
 .mb-2 {
     margin-bottom: 2rem !important;
 }
@@ -793,6 +795,10 @@ textarea {
    =============================================*/
 header .banner {
     position: relative;
+    background-image: url(../img/banner-bg.png);
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header .banner .banner-bg-color {
@@ -806,7 +812,7 @@ header .banner .banner-bg-color {
 }
 
 header .banner .banner-informations {
-    position: absolute;
+    position: relative;
     top: 30%;
     left: 10%;
     padding-left: 1rem;
@@ -1133,14 +1139,14 @@ footer .copyright a {
 
     .navbar-top .right {
         position: fixed;
-        left: 0%;
         top: 50%;
+        left: 0%;
         z-index: 2;
-        transform: translate(0%, -50%);
-        -webkit-transform: translate(0%, -50%);
-        -moz-transform: translate(0%, -50%);
-        -ms-transform: translate(0%, -50%);
-        -o-transform: translate(0%, -50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
 
     .navbar-top .right ul {
@@ -1161,7 +1167,7 @@ footer .copyright a {
     .navbar .menu ul .menu-item {
         padding: 1rem .4rem;
     }
-    
+
 
 
     footer .footer-about,
@@ -1183,7 +1189,10 @@ footer .copyright a {
     html {
         font-size: 14px;
     }
-
+    header .banner {
+        background-image: url(../img/mobile-banner-bg.png);
+        height: 400px;
+    }
     .navbar-top {
         width: 100%;
     }
@@ -1210,6 +1219,7 @@ footer .copyright a {
         width: 100%;
         height: 100vh;
         padding-top: 2rem;
+        display: none;
         background-color: var(--darkblue);
         transition: all .5s;
         -webkit-transition: all .5s;
@@ -1219,6 +1229,7 @@ footer .copyright a {
     }
 
     #menu-active:checked~.menu {
+        display: block;
         left: 0%;
     }
 
@@ -1246,7 +1257,12 @@ footer .copyright a {
     .navbar .menu .dropdown-menu {
         color: var(--white);
     }
-    footer .footer-about{
+
+    .statistic {
+        background-image: url(../img/home-contact-bg-1.jpg);
+    }
+
+    footer .footer-about {
         padding-top: 4rem;
     }
 }
