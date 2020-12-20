@@ -12,12 +12,10 @@
     ## Banner
     ## Services
     ## Our Projects
-    ## Our Work
+    ## Our Team
     ## Statistic
 # Footer
 --------------------------------------------------------------*/
-@import './reset.css';
-
 :root {
     --white: white;
     --black: #1f1641;
@@ -50,6 +48,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
+    background-color: rgb(240, 240, 240);
 }
 
 hr {
@@ -242,7 +241,7 @@ h6 {
 }
 
 .blog-card .blog-card-body {
-    border: 1px solid var(--blue);
+    background-color: var(--white);
     border-top: none;
 }
 
@@ -316,6 +315,51 @@ h6 {
     background-color: var(--blue);
 }
 
+/* Breadcrumb */
+.breadcrumb {
+    position: relative;
+    width: 81%;
+    padding: 1rem;
+    margin: 2rem auto;
+    background-color: var(--white);
+}
+
+.breadcrumb .home-icon {
+    position: absolute;
+    padding: .6rem .8rem;
+    top: 10%;
+    left: 1%;
+    border-radius: 50%;
+    background-color: var(--blue);
+    color: var(--white);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.breadcrumb .breadcrumb-link {
+    margin-left: 1rem;
+    display: inline-block;
+}
+
+.breadcrumb .breadcrumb-link:nth-child(2) {
+    margin-left: 3rem;
+}
+
+.breadcrumb .breadcrumb-link::after {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f105";
+    position: absolute;
+    height: 100%;
+    padding: 0rem .4rem;
+    display: inline-block;
+}
+
+.breadcrumb .breadcrumb-link:last-child:after {
+    content: "";
+}
+
 /* Other */
 
 .mx-2 {
@@ -346,6 +390,9 @@ h6 {
 
 .pb-2 {
     padding-bottom: 2rem !important;
+}
+.pb-1{
+    padding-bottom: 1rem !important;
 }
 
 .d-block-md {
@@ -605,6 +652,9 @@ h6 {
 
 ## Navbar Top
 ----------------------------------------------------------------*/
+nav {
+    background-color: var(--white);
+}
 
 .navbar-top {
     display: flex;
@@ -859,10 +909,6 @@ header .banner .banner-informations p {
 /*--------------------------------------------------------------
 # Services
 ----------------------------------------------------------------*/
-.services {
-    /* background-color: var(--blue); */
-}
-
 header .services .service-card {
     padding: .4rem;
     text-align: center;
@@ -914,20 +960,25 @@ header .services .service-card .service-card-description {
 
 .our-projects .home-project-card {
     position: relative;
-    border-radius: .4rem;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, .45);
-    -webkit-border-radius: .4rem;
-    -moz-border-radius: .4rem;
-    -ms-border-radius: .4rem;
-    -o-border-radius: .4rem;
+    overflow: hidden;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
 }
 
-.our-projects .home-project-card img {
-    border-radius: .4rem;
-    -webkit-border-radius: .4rem;
-    -moz-border-radius: .4rem;
-    -ms-border-radius: .4rem;
-    -o-border-radius: .4rem;
+.our-projects .home-project-card:hover img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transition: transform .4s;
+    -webkit-transition: transform .4s;
+    -moz-transition: transform .4s;
+    -ms-transition: transform .4s;
+    -o-transition: transform .4s;
 }
 
 .our-projects .home-project-card .home-project-overlay {
@@ -936,30 +987,38 @@ header .services .service-card .service-card-description {
     left: 0%;
     width: 100%;
     height: 100%;
-    border-radius: .4rem;
+    padding: 1rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity .4s;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
     opacity: 0;
     color: var(--white);
-    background-color: rgba(31, 22, 65, 0.5);
-    -webkit-transition: opacity .4s;
-    -moz-transition: opacity .4s;
-    -ms-transition: opacity .4s;
-    -o-transition: opacity .4s;
-    -webkit-border-radius: .4rem;
-    -moz-border-radius: .4rem;
-    -ms-border-radius: .4rem;
-    -o-border-radius: .4rem;
+    background-color: rgba(17, 17, 17, 0.5);
 }
 
-.our-projects .home-project-card .home-project-overlay:hover {
+
+.our-projects .home-project-card:hover .home-project-overlay {
     opacity: 1;
 }
 
-.our-projects .home-project-card .home-project-overlay .project-link {
-    font-size: 1.5rem;
+.our-projects .home-project-card .home-project-overlay .home-project-name {
+    font-size: 1.4rem;
+    color: var(--white);
+}
+
+.our-projects .home-project-card .home-project-overlay .home-project-info-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.our-projects .home-project-card .home-project-overlay .home-project-info-group .home-project-category {
+    color: var(--white);
+}
+
+.our-projects .home-project-card .home-project-overlay .home-project-info-group .home-project-link {
+    font-size: 1.2rem;
     color: var(--white);
 }
 
@@ -968,6 +1027,7 @@ header .services .service-card .service-card-description {
 ----------------------------------------------------------------*/
 .team-card-user {
     position: relative;
+    background-color: var(--white);
 
 }
 
@@ -1016,7 +1076,7 @@ header .services .service-card .service-card-description {
 }
 
 .team-card-user .team-card-user-footer {
-    background-color: var(--black);
+    background-color: var(--blue);
 }
 
 .team-card-user .team-card-user-footer ul {
@@ -1077,6 +1137,145 @@ header .services .service-card .service-card-description {
 .statistic .statistic-card .counter {
     font-size: 2rem;
     margin: 0rem;
+}
+
+/*--------------------------------------------------------------
+# Blog Page
+----------------------------------------------------------------*/
+.blog-right-layout {
+    background-color: var(--white);
+    padding: 2rem;
+}
+
+.blog-right-layout .blog-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-right-layout .blog-search input,
+.blog-right-layout .blog-search button {
+    border: none;
+    outline: none;
+    padding: .4rem 1rem;
+}
+
+.blog-right-layout .blog-search input {
+    border: 1px solid var(--grey);
+    border-right: none;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+
+}
+
+.blog-right-layout .blog-search button {
+    padding: .41rem 1rem;
+    border: 1px solid var(--blue);
+    border-left: none;
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+    color: var(--white);
+    background: var(--blue);
+}
+
+.blog-right-layout .categories .category-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--grey);
+    padding: .6rem .4rem;
+}
+
+.blog-right-layout .categories .category-item a,
+.blog-right-layout .recent-post .last-blog-card .last-blog-content .last-blog-title   {
+    transition: color .4s;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -ms-transition: color .4s;
+    -o-transition: color .4s;
+}
+
+.blog-right-layout .categories .category-item:hover a,
+.blog-right-layout .recent-post .last-blog-card .last-blog-content .last-blog-title:hover{
+    color: var(--blue);
+
+}
+
+.blog-right-layout .categories .category-item::before {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f07b";
+    position: absolute;
+}
+
+.blog-right-layout .categories .category-item .category-link {
+    padding-left: 2rem;
+}
+
+.blog-right-layout .categories .category-item .badge {
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--blue);
+    color: var(--white);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.blog-right-layout .recent-post .title,
+.blog-right-layout .tags-container .title{
+    display: inline-block;
+    margin: 1rem 0rem;
+    padding-bottom: .2rem;
+    border-bottom: 1px solid var(--black);
+}
+
+.blog-right-layout .recent-post .last-blog-card {
+    display: flex;
+    align-items: center;
+    padding: .4rem 0rem;
+}
+
+.blog-right-layout .recent-post .last-blog-card img {
+    width: 5rem;
+}
+
+.blog-right-layout .recent-post .last-blog-card .last-blog-content {
+    padding-left: .4rem;
+}
+
+.blog-right-layout .recent-post .last-blog-card .last-blog-content .last-blog-title {
+    font-size: 1rem;
+}
+
+
+.blog-right-layout .recent-post .last-blog-card .last-blog-content .last-blog-date {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0rem;
+    font-size: .9rem;
+}
+
+.blog-right-layout .recent-post .last-blog-card .last-blog-content .last-blog-date i {
+    margin-right: .2rem;
+    font-weight: 400;
+}
+.blog-right-layout .tags{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog-right-layout .tags-container .tags .tag{
+    border: 1px solid var(--blue);
+    margin-right: .4rem;
+    margin-bottom: .4rem;
+    padding: .2rem 1rem;
 }
 
 /*--------------------------------------------------------------
