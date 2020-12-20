@@ -1,4 +1,23 @@
-/* Base */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Heading
+# Global
+# Grid System
+# Nav
+	## Navbar Top
+    ## Navbar
+#Index Page
+    ## Banner
+    ## Services
+    ## Our Projects
+    ## Our Work
+    ## Statistic
+# Footer
+--------------------------------------------------------------*/
+@import './reset.css';
+
 :root {
     --white: white;
     --black: #1f1641;
@@ -10,6 +29,10 @@
     --gutter-x: 1.5rem;
     --gutter-y: 0;
 }
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
 
 *,
 *::before,
@@ -35,44 +58,6 @@ hr {
     background-color: currentColor;
     border: 0;
     opacity: 0.25;
-}
-
-h6,
-h5,
-h4,
-h3,
-h2,
-h1 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-
-h1 {
-    font-size: 2.5rem;
-
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-
-h3 {
-    font-size: 1.75rem;
-}
-
-h4 {
-    font-size: 1.5rem;
-}
-
-h5 {
-    font-size: 1.25rem;
-}
-
-h6 {
-    font-size: 1rem;
 }
 
 p {
@@ -163,16 +148,53 @@ textarea {
     resize: vertical;
 }
 
-.btn {
-    border: none;
-    outline: none;
-    padding: .4rem .8rem;
+/*--------------------------------------------------------------
+# Heading
+--------------------------------------------------------------*/
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
 
 }
 
-/* =============================================
-                    GLOBAL
-   =============================================*/
+h2 {
+    font-size: 2rem;
+}
+
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+/*--------------------------------------------------------------
+# Global
+----------------------------------------------------------------*/
+
+/* Blog Card */
+
 .section-header {
     display: flex;
     justify-content: space-between;
@@ -204,6 +226,7 @@ textarea {
     font-size: 1.2rem;
 }
 
+/* Blog Card */
 
 .blog-card .blog-card-category {
     margin: .5rem 1rem;
@@ -281,9 +304,19 @@ textarea {
     -o-transition: background-color .4s;
 }
 
+/* Button */
+
+.btn {
+    border: none;
+    outline: none;
+    padding: .4rem .8rem;
+}
+
 .btn-primary:hover {
     background-color: var(--blue);
 }
+
+/* Other */
 
 .mx-2 {
     margin: 2rem auto;
@@ -319,6 +352,9 @@ textarea {
     display: none;
 }
 
+/* Sosial  */
+
+
 .facebook {
     background-color: #3b5999 !important;
 }
@@ -347,9 +383,9 @@ textarea {
     background-color: #f57d00 !important;
 }
 
-/* =============================================
-                    GRID SYSTEM 
-   =============================================*/
+/*--------------------------------------------------------------
+# Grid System
+----------------------------------------------------------------*/
 .container {
     width: 90%;
     padding-right: var(--gutter-x, 0.75rem);
@@ -563,9 +599,12 @@ textarea {
     border-bottom: .18rem solid var(--blue);
 }
 
-/* =============================================
-                    NAVBAR TOP 
-   =============================================*/
+/*--------------------------------------------------------------
+                            #Navbar
+
+
+## Navbar Top
+----------------------------------------------------------------*/
 
 .navbar-top {
     display: flex;
@@ -629,18 +668,14 @@ textarea {
     background-color: #cd201f;
 }
 
-/* .navbar-top .right ul li:nth-child(6):hover {
-    background-color: #f57d00;
-} */
-
 
 .navbar-top .right ul li a i {
     color: var(--white);
 }
 
-/* =============================================
-                    NAVBAR 
-   =============================================*/
+/*--------------------------------------------------------------
+## Navbar Menu
+----------------------------------------------------------------*/
 
 .navbar {
     display: flex;
@@ -679,8 +714,6 @@ textarea {
     justify-content: space-between;
 }
 
-
-
 .navbar .menu ul .menu-item {
     padding: 1rem;
     font-weight: 500;
@@ -690,7 +723,6 @@ textarea {
 .navbar .menu ul .menu-item:nth-child(1) {
     padding-left: 0rem;
 }
-
 
 .navbar .menu ul .menu-item:nth-child(6) {
     padding-right: 0rem;
@@ -787,9 +819,9 @@ textarea {
     color: var(--blue);
 }
 
-/* =============================================
-                    BANNER 
-   =============================================*/
+/*--------------------------------------------------------------
+# Banner
+----------------------------------------------------------------*/
 header .banner {
     position: relative;
     background-image: url(../img/banner-bg.png);
@@ -824,11 +856,11 @@ header .banner .banner-informations p {
     color: var(--white);
 }
 
-/* =============================================
-                    SERVICES 
-   =============================================*/
+/*--------------------------------------------------------------
+# Services
+----------------------------------------------------------------*/
 .services {
-    background-color: var(--black);
+    /* background-color: var(--blue); */
 }
 
 header .services .service-card {
@@ -839,7 +871,7 @@ header .services .service-card {
     -moz-transition: all .3s;
     -ms-transition: all .3s;
     -o-transition: all .3s;
-    background-color: var(--black);
+    background-color: var(--white);
     box-shadow: 0px 3px 10px rgba(0, 0, 0, .45);
 }
 
@@ -850,7 +882,7 @@ header .services .service-card .service-card-img {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--white);
+    background-color: var(--blue);
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
@@ -859,26 +891,26 @@ header .services .service-card .service-card-img {
 
 header .services .service-card .service-card-img i {
     font-size: 2.3rem;
-    color: var(--darkblue);
+    color: var(--white);
 }
 
 header .services .service-card .service-card-title {
     margin-top: .5rem;
     font-size: 1.6rem;
     white-space: nowrap;
-    color: var(--white);
+    color: var(--black);
 }
 
 header .services .service-card .service-card-description {
     margin: 0rem;
     font-weight: 300;
     line-height: 1.6rem;
-    color: var(--white);
+    color: var(--black);
 }
 
-/* =============================================
-                    OUR PROJECTS
-   =============================================*/
+/*--------------------------------------------------------------
+# Our Projects
+----------------------------------------------------------------*/
 
 .our-projects .home-project-card {
     position: relative;
@@ -931,9 +963,9 @@ header .services .service-card .service-card-description {
     color: var(--white);
 }
 
-/* =============================================
-                    OUR TEAM
-   =============================================*/
+/*--------------------------------------------------------------
+# Our Team
+----------------------------------------------------------------*/
 .team-card-user {
     position: relative;
 
@@ -1000,9 +1032,9 @@ header .services .service-card .service-card-description {
     color: var(--white);
 }
 
-/* =============================================
-                   STATİSTİC
-   =============================================*/
+/*--------------------------------------------------------------
+# Statistic
+----------------------------------------------------------------*/
 
 .statistic {
     padding-top: 2rem;
@@ -1047,9 +1079,9 @@ header .services .service-card .service-card-description {
     margin: 0rem;
 }
 
-/* =============================================
-                   FOOTER
-   =============================================*/
+/*--------------------------------------------------------------
+# Footer
+----------------------------------------------------------------*/
 
 footer {
     clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
@@ -1216,10 +1248,10 @@ footer .copyright a {
         top: 100%;
         left: 100%;
         z-index: 3;
-        width: 100%;
-        height: 100vh;
+        width: 0%;
+        height: 0%;
         padding-top: 2rem;
-        display: none;
+        overflow: hidden;
         background-color: var(--darkblue);
         transition: all .5s;
         -webkit-transition: all .5s;
@@ -1229,7 +1261,9 @@ footer .copyright a {
     }
 
     #menu-active:checked~.menu {
-        display: block;
+        width: 100%;
+        height: 100vh;
+        overflow: visible;
         left: 0%;
     }
 
