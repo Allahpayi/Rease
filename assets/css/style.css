@@ -359,6 +359,33 @@ h6 {
 .breadcrumb .breadcrumb-link:last-child:after {
     content: "";
 }
+/* Pagination */
+
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+.pagination .pagination-item{
+    margin: 0rem .2rem;
+    padding: .2rem .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+.pagination .pagination-item.active{
+    background-color: var(--blue);
+}
+.pagination .pagination-link{
+    display: inline-block;
+    color: var(--white);
+}
+
 
 /* Other */
 
@@ -1145,6 +1172,8 @@ header .services .service-card .service-card-description {
 .blog-right-layout {
     background-color: var(--white);
     padding: 2rem;
+    padding-bottom:0rem ;
+    height: 100%;
 }
 
 .blog-right-layout .blog-search {
@@ -1276,6 +1305,15 @@ header .services .service-card .service-card-description {
     margin-right: .4rem;
     margin-bottom: .4rem;
     padding: .2rem 1rem;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+}
+.blog-right-layout .tags-container .tags .tag:hover{
+    color: var(--white);
+    background-color: var(--blue);
 }
 
 /*--------------------------------------------------------------
@@ -1283,7 +1321,7 @@ header .services .service-card .service-card-description {
 ----------------------------------------------------------------*/
 
 footer {
-    clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+    /* clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0); */
     padding: 4rem;
     padding-bottom: 0rem;
     background-color: var(--black);
