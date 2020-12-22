@@ -291,6 +291,46 @@ h6 {
     font-size: .8rem;
 }
 
+/* Form */
+.input-group {
+    position: relative;
+    margin: 1rem 0rem;
+}
+
+.input-group i {
+    position: absolute;
+    top: 52%;
+    left: 5%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.input-group .form-control {
+    padding: .4rem 2rem;
+    outline: none;
+    border: 1px solid var(--grey);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.input-group.message i {
+    top: 14%;
+    left: 4%;
+}
+
+.input-group.message textarea {
+    height: 9.4rem;
+    margin: 0;
+}
+
 
 
 /* Button */
@@ -906,7 +946,7 @@ nav {
 
 .navbar .menu .dropdown-menu .dropdown .dropdown-items h4 {
     font-size: 1.2rem;
-    color: var(--blue);
+    color: var(--black);
 }
 
 .navbar .menu .dropdown-menu .dropdown .dropdown-items li a {
@@ -920,6 +960,7 @@ nav {
 .navbar .menu .dropdown-menu .dropdown .dropdown-items li:hover a {
     color: var(--blue);
 }
+
 
 /*--------------------------------------------------------------
 # Banner
@@ -1490,69 +1531,30 @@ header .services .service-card .service-card-description {
 .leave-comment {
     margin-top: 1rem;
     padding-bottom: 1rem;
-
     border-top: 1px solid var(--grey);
     border-bottom: 1px solid var(--grey);
-
 }
 
 .leave-comment h4 {
     margin: 0rem;
     padding: 1rem 0rem;
     border-bottom: 1px solid var(--grey);
-
 }
 
-.leave-comment .input-group {
-    position: relative;
-    margin: 1rem 0rem;
-}
 
-.leave-comment .input-group i {
-    position: absolute;
-    top: 50%;
-    left: 3%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-}
-
-.leave-comment .input-group .form-control {
-    padding: .4rem 2rem;
-    outline: none;
-    border: 1px solid var(--grey);
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
-    width: 100%;
-    height: 100%;
-}
-
-.leave-comment .input-group.message i {
-    top: 14%;
-    left: 4%;
-}
-
-.leave-comment .input-group.message textarea {
-    height: 9.4rem;
-    margin: 0;
-}
 
 /*--------------------------------------------------------------
 # Portofolio -Detail
 ----------------------------------------------------------------*/
-.portofolio-slide-container{
+.portofolio-slide-container {
     position: relative;
 }
+
 .portofolio-slide-container .slide-item {
     display: none;
 }
-  
-.portofolio-slide-container .portofolio-information{
+
+.portofolio-slide-container .portofolio-information {
     position: absolute;
     bottom: 0%;
     right: 0%;
@@ -1560,9 +1562,10 @@ header .services .service-card .service-card-description {
     background-color: var(--white);
     color: var(--black);
     box-shadow: 0px 3px 10px rgba(0, 0, 0, .45);
-    
+
 }
-.portofolio-slide-container .portofolio-information h6{
+
+.portofolio-slide-container .portofolio-information h6 {
     border-bottom: 1px solid var(--grey);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
@@ -1570,17 +1573,21 @@ header .services .service-card .service-card-description {
     text-align: center;
     font-weight: 600;
 }
-.portofolio-slide-container .portofolio-information li{
+
+.portofolio-slide-container .portofolio-information li {
     padding: .2rem 0rem;
 }
-.portofolio-slide-container .portofolio-information li span{
+
+.portofolio-slide-container .portofolio-information li span {
     font-weight: 600;
 }
-.dots{
+
+.dots {
     margin: 1rem 0rem;
     display: inline-block;
 
 }
+
 .dot {
     width: 1rem;
     height: 1rem;
@@ -1588,54 +1595,129 @@ header .services .service-card .service-card-description {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
-  
-  .active-dot {
+}
+
+.active-dot {
     background-color: var(--blue);
-  }
-.portofolio-about h6{
+}
+
+.portofolio-about h6 {
     padding: 1rem 0rem;
     font-size: 1.6rem;
     font-weight: 600;
 }
-.portofolio-about p{
+
+.portofolio-about p {
     font-size: 1.1rem;
     font-weight: 300;
 }
+
 /*--------------------------------------------------------------
 # About Us
 ----------------------------------------------------------------*/
-.about-us{
+.about-us {
     height: 100%;
     padding: 2rem;
     background-color: var(--white);
 
 }
-.about-us .about-title{
+
+.about-us .about-title {
     font-size: 2rem;
 }
 
-.about-us ul{
+.about-us ul {
     list-style: circle;
     padding: 1rem;
 }
 
-.all-employees .title{
+.all-employees .title {
     font-size: 2rem;
     padding: 0%;
     margin-bottom: 2rem;
     display: inline-block;
-    
+
 }
-.all-employees .title::after{
+
+.all-employees .title::after {
     content: "";
     display: block;
-    /* margin: 1rem 0rem; */
     margin-top: .6rem;
     height: 2px;
     width: 100%;
     background-color: var(--blue);
 }
+
+/*--------------------------------------------------------------
+# Contact
+----------------------------------------------------------------*/
+.contact-information,
+.contact-form {
+    padding: 1rem;
+    height: 100%;
+    background-color: var(--white);
+}
+
+.contact-information .title,
+.contact-form .form-title {
+    text-align: center;
+}
+
+.contact-information ul {
+    padding: 1rem 0rem;
+}
+
+.contact-information ul li {
+    padding: .4rem 1rem;
+}
+
+.contact-information ul li i {
+    margin-right: 1rem;
+}
+
+
+.contact-information ul li a.website-link {
+    color: var(--blue);
+}
+
+
+/*--------------------------------------------------------------
+# 404 and 500 page
+----------------------------------------------------------------*/
+
+.error-page{
+    padding: 40px 0;
+    background: #fff;
+    font-family: 'Arvo', serif;
+    text-align: center;
+    max-height: 100vh;
+}
+
+.error-pageimg {
+    width: 100%;
+}
+
+.error-page-bg {
+    background-image: url(../img/error-page.gif);
+    height: 24rem;
+    background-position: center;
+}
+.error-page-bg h1 {
+    font-size: 5rem;
+}
+
+.error-page-link {
+    color: #fff !important;
+    padding: .4rem 1rem;
+    background: var(--blue);
+    margin: 20px 0;
+    display: inline-block;
+}
+.content-box {
+    margin-top: -1rem;
+}
+
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -1857,7 +1939,8 @@ footer .copyright a {
     .blog-comment-container .blog-comments .comment.answer {
         margin-left: 0rem;
     }
-    .portofolio-slide-container .portofolio-information{
+
+    .portofolio-slide-container .portofolio-information {
         position: static;
     }
 
