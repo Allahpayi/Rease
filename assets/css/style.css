@@ -47,7 +47,7 @@ body {
     font-family: var(--font-poppins);
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: var(--black);
     background-color: rgb(240, 240, 240);
 }
 
@@ -300,6 +300,7 @@ h6 {
     outline: none;
     padding: .4rem .8rem;
 }
+
 .btn-primary {
     transition: background-color .4s;
     border-bottom-left-radius: 1rem;
@@ -318,7 +319,7 @@ h6 {
 
 .btn-dark {
     transition: background-color .4s;
-   
+
     background-color: var(--black);
     color: var(--white);
     -webkit-transition: background-color .4s;
@@ -693,7 +694,6 @@ h6 {
 }
 
 .active {
-
     color: var(--blue);
     border-bottom: .18rem solid var(--blue);
 }
@@ -1541,9 +1541,101 @@ header .services .service-card .service-card-description {
     height: 9.4rem;
     margin: 0;
 }
+
 /*--------------------------------------------------------------
-# Portofolio
+# Portofolio -Detail
 ----------------------------------------------------------------*/
+.portofolio-slide-container{
+    position: relative;
+}
+.portofolio-slide-container .slide-item {
+    display: none;
+}
+  
+.portofolio-slide-container .portofolio-information{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    padding: 2rem;
+    background-color: var(--white);
+    color: var(--black);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .45);
+    
+}
+.portofolio-slide-container .portofolio-information h6{
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 600;
+}
+.portofolio-slide-container .portofolio-information li{
+    padding: .2rem 0rem;
+}
+.portofolio-slide-container .portofolio-information li span{
+    font-weight: 600;
+}
+.dots{
+    margin: 1rem 0rem;
+    display: inline-block;
+
+}
+.dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--black);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active-dot {
+    background-color: var(--blue);
+  }
+.portofolio-about h6{
+    padding: 1rem 0rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.portofolio-about p{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+/*--------------------------------------------------------------
+# About Us
+----------------------------------------------------------------*/
+.about-us{
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--white);
+
+}
+.about-us .about-title{
+    font-size: 2rem;
+}
+
+.about-us ul{
+    list-style: circle;
+    padding: 1rem;
+}
+
+.all-employees .title{
+    font-size: 2rem;
+    padding: 0%;
+    margin-bottom: 2rem;
+    display: inline-block;
+    
+}
+.all-employees .title::after{
+    content: "";
+    display: block;
+    /* margin: 1rem 0rem; */
+    margin-top: .6rem;
+    height: 2px;
+    width: 100%;
+    background-color: var(--blue);
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -1764,6 +1856,9 @@ footer .copyright a {
 
     .blog-comment-container .blog-comments .comment.answer {
         margin-left: 0rem;
+    }
+    .portofolio-slide-container .portofolio-information{
+        position: static;
     }
 
     footer .footer-about {
