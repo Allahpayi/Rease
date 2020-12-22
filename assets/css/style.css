@@ -291,6 +291,15 @@ h6 {
     font-size: .8rem;
 }
 
+
+
+/* Button */
+
+.btn {
+    border: none;
+    outline: none;
+    padding: .4rem .8rem;
+}
 .btn-primary {
     transition: background-color .4s;
     border-bottom-left-radius: 1rem;
@@ -303,16 +312,23 @@ h6 {
     -o-transition: background-color .4s;
 }
 
-/* Button */
-
-.btn {
-    border: none;
-    outline: none;
-    padding: .4rem .8rem;
-}
-
 .btn-primary:hover {
     background-color: var(--blue);
+}
+
+.btn-dark {
+    transition: background-color .4s;
+   
+    background-color: var(--black);
+    color: var(--white);
+    -webkit-transition: background-color .4s;
+    -moz-transition: background-color .4s;
+    -ms-transition: background-color .4s;
+    -o-transition: background-color .4s;
+}
+
+.btn-dark:hover {
+    background-color: var(--darkblue);
 }
 
 /* Breadcrumb */
@@ -994,7 +1010,7 @@ header .services .service-card .service-card-description {
 # Our Projects
 ----------------------------------------------------------------*/
 
-.our-projects .home-project-card {
+.project-card {
     position: relative;
     overflow: hidden;
     transition: all .4s;
@@ -1004,7 +1020,7 @@ header .services .service-card .service-card-description {
     -o-transition: all .4s;
 }
 
-.our-projects .home-project-card:hover img {
+.project-card:hover img {
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -1017,7 +1033,7 @@ header .services .service-card .service-card-description {
     -o-transition: transform .4s;
 }
 
-.our-projects .home-project-card .home-project-overlay {
+.project-card .project-overlay {
     position: absolute;
     top: 0%;
     left: 0%;
@@ -1034,26 +1050,26 @@ header .services .service-card .service-card-description {
 }
 
 
-.our-projects .home-project-card:hover .home-project-overlay {
+.project-card:hover .project-overlay {
     opacity: 1;
 }
 
-.our-projects .home-project-card .home-project-overlay .home-project-name {
+.project-card .project-overlay .project-name {
     font-size: 1.4rem;
     color: var(--white);
 }
 
-.our-projects .home-project-card .home-project-overlay .home-project-info-group {
+.project-card .project-overlay .project-info-group {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.our-projects .home-project-card .home-project-overlay .home-project-info-group .home-project-category {
+.project-card .project-overlay .project-info-group .project-category {
     color: var(--white);
 }
 
-.our-projects .home-project-card .home-project-overlay .home-project-info-group .home-project-link {
+.project-card .project-overlay .project-info-group .project-link {
     font-size: 1.2rem;
     color: var(--white);
 }
@@ -1517,7 +1533,7 @@ header .services .service-card .service-card-description {
 }
 
 .leave-comment .input-group.message i {
-    top: 15%;
+    top: 14%;
     left: 4%;
 }
 
@@ -1525,6 +1541,9 @@ header .services .service-card .service-card-description {
     height: 9.4rem;
     margin: 0;
 }
+/*--------------------------------------------------------------
+# Portofolio
+----------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Footer
